@@ -1,0 +1,29 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "モダンなポートフォリオサイト（モノレポ構成）",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python -m uvicorn app.main:app --reload",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "build:frontend": "cd frontend && npm run build",
+    "start:frontend": "cd frontend && npm run start",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "fastapi",
+    "firebase",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
