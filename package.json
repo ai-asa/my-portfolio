@@ -1,29 +1,39 @@
 {
   "name": "my-portfolio",
-  "version": "1.0.0",
-  "description": "モダンなポートフォリオサイト（モノレポ構成）",
+  "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "frontend"
-  ],
   "scripts": {
-    "dev:frontend": "cd frontend && npm run dev",
-    "dev:backend": "cd backend && python -m uvicorn app.main:app --reload",
-    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
-    "build:frontend": "cd frontend && npm run build",
-    "start:frontend": "cd frontend && npm run start",
-    "lint:frontend": "cd frontend && npm run lint"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "portfolio",
-    "nextjs",
-    "fastapi",
-    "firebase",
-    "tailwindcss"
-  ],
-  "author": "",
-  "license": "MIT",
+  "dependencies": {
+    "@headlessui/react": "latest",
+    "@heroicons/react": "^2.2.0",
+    "@mdx-js/loader": "latest",
+    "@next/mdx": "latest",
+    "clsx": "latest",
+    "firebase": "latest",
+    "firebase-admin": "latest",
+    "framer-motion": "latest",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-calendar-heatmap": "latest",
+    "react-dom": "^19.0.0",
+    "recharts": "latest",
+    "rss-parser": "latest",
+    "tailwindcss-animate": "latest"
+  },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

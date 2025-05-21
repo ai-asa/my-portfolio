@@ -1,83 +1,36 @@
-# モダンポートフォリオサイト
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Next.jsとFastAPIを使用したモダンなポートフォリオサイト。フロントエンドとバックエンドをモノレポ構成で管理しています。
+## Getting Started
 
-## 機能
+First, run the development server:
 
-- レスポンシブデザイン
-- ダークモード対応
-- 多言語対応（日本語/英語）
-- Firebaseデータストア
-
-## 技術スタック
-
-### フロントエンド
-- Next.js
-- TypeScript
-- Tailwind CSS
-- next-intl（多言語対応）
-
-### バックエンド
-- Python
-- FastAPI
-- Firebase Admin SDK
-
-### インフラ/CI/CD
-- Vercel
-- GitHub Actions
-
-## 開発環境のセットアップ
-
-### 前提条件
-- Node.js 18.x以上
-- Python 3.11以上
-- npm または yarn
-
-### インストール手順
-
-1. リポジトリをクローン
 ```bash
-git clone https://github.com/yourusername/my-portfolio.git
-cd my-portfolio
-```
-
-2. フロントエンドの依存関係をインストール
-```bash
-cd frontend
-npm install
-```
-
-3. バックエンドの依存関係をインストール
-```bash
-cd ../backend
-pip install -r requirements.txt
-```
-
-4. 環境変数の設定
-```bash
-# バックエンド用の.envファイルを作成
-cp backend/.env.example backend/.env
-# 必要な環境変数を設定
-```
-
-### 開発サーバーの起動
-
-1. フロントエンド開発サーバー
-```bash
-cd frontend
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-2. バックエンド開発サーバー
-```bash
-cd backend
-python -m uvicorn app.main:app --reload
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## デプロイ
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-このプロジェクトはVercelにデプロイするように設定されています。GitHub Actionsを使用して、mainブランチへのプッシュ時に自動的にデプロイされます。
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## ライセンス
+## Learn More
 
-MIT
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
