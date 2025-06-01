@@ -23,14 +23,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
 }>) {
   return (
     <html 
-      lang={locale || "ja"} 
+      lang="ja" 
       suppressHydrationWarning
     >
       <body
