@@ -22,6 +22,7 @@ const ThemeProviderContext = createContext<ThemeProviderState | undefined>(undef
 export function ThemeProvider({
   children,
   defaultTheme = "system",
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   attribute: _attribute = "class",
   enableSystem = true,
   disableTransitionOnChange = false,
