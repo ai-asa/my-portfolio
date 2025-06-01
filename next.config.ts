@@ -10,6 +10,9 @@ const withMDX = createMDX({
 });
 
 const nextConfig: NextConfig = {
+  // Firebase Hosting用の静的エクスポート設定
+  output: "export",
+
   // 多言語対応設定
   i18n: {
     locales: ["ja", "en"],
