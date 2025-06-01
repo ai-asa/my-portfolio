@@ -13,12 +13,6 @@ const nextConfig: NextConfig = {
   // Firebase Hosting用の静的エクスポート設定
   output: "export",
 
-  // 多言語対応設定
-  i18n: {
-    locales: ["ja", "en"],
-    defaultLocale: "ja",
-  },
-
   // MDXをページとして扱うための設定
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 
@@ -26,6 +20,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["github.com", "zenn.dev"], // 画像最適化対象ドメイン
+    unoptimized: true, // 静的エクスポート時は画像最適化を無効化
   },
 };
 
