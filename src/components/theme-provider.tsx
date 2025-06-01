@@ -22,7 +22,7 @@ const ThemeProviderContext = createContext<ThemeProviderState | undefined>(undef
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  attribute = "class",
+  attribute: _attribute = "class",
   enableSystem = true,
   disableTransitionOnChange = false,
 }: ThemeProviderProps) {

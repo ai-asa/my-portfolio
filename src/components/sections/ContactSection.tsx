@@ -41,7 +41,7 @@ export default function ContactSection() {
         subject: '',
         message: '',
       })
-    } catch (error) {
+    } catch (_error) {
       // 送信失敗
       setSubmitStatus('error')
     } finally {

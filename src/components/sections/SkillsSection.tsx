@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
-import Image from 'next/image'
+// import Image from 'next/image' // TODO: 画像実装時に有効化
 
 // 言語使用割合のサンプルデータ
 const languageData = [
