@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image' // TODO: 画像実装時に有効化
 
 // プロジェクトのモックデータ
 const projects = [

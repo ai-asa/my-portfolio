@@ -41,7 +41,8 @@ export default function ContactSection() {
         subject: '',
         message: '',
       })
-    } catch (error) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (_error) {
       // 送信失敗
       setSubmitStatus('error')
     } finally {
