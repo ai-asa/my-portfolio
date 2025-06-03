@@ -9,9 +9,10 @@ import clsx from 'clsx'
 
 const navItems = [
   { name: 'Home', href: '#home' },
-  { name: 'Skills', href: '#skills' },
+  { name: 'Career', href: '#career' },
   { name: 'Projects', href: '#projects' },
   { name: 'Blog', href: '#blog' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ]
 
