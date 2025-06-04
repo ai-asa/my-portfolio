@@ -8,27 +8,31 @@ interface CareerItem {
   year: string
   title: string
   description: string
-  skills?: string[]
+  gradientClass: string
+  accentColor: string
 }
 
 const careerData: CareerItem[] = [
   {
-    year: "2025",
-    title: "フルスタックエンジニアとして活動",
-    description: "AI × Web開発の案件に従事。企業向けのAIチャットボット、RAGシステム、データ分析ダッシュボードなどを開発。",
-    skills: ["Next.js", "TypeScript", "Python", "FastAPI", "Gemini API"]
+    year: "2023",
+    title: "Pythonプログラミング学習開始",
+    description: "機械学習・Web開発の基礎を習得。個人プロジェクトとしてAIライブストリームシステムを開発。",
+    gradientClass: "from-primary to-cyan-500",
+    accentColor: "border-l-primary"
   },
   {
     year: "2024",
     title: "システムエンジニア副業開始",
     description: "LINE連携AIチャットボット開発、AI活用学習サイト構築、その他Web開発案件を担当。",
-    skills: ["LINE Messaging API", "Firebase", "React", "Node.js"]
+    gradientClass: "from-cyan-500 to-secondary",
+    accentColor: "border-l-cyan-500"
   },
   {
-    year: "2023",
-    title: "Pythonプログラミング学習開始",
-    description: "機械学習・Web開発の基礎を習得。個人プロジェクトとしてAIライブストリームシステムを開発。",
-    skills: ["Python", "Machine Learning", "Web Development"]
+    year: "2025",
+    title: "フルスタックエンジニアとして活動",
+    description: "AI × Web開発の案件に従事。企業向けのAIチャットボット、RAGシステム、データ分析ダッシュボードなどを開発。",
+    gradientClass: "from-secondary to-accent",
+    accentColor: "border-l-secondary"
   }
 ]
 
@@ -55,7 +59,7 @@ export default function CareerSection() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* タイムライン */}
-            <div className="absolute left-0 md:left-20 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
+            <div className="absolute left-0 md:left-20 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-cyan-500 to-secondary"></div>
 
             {careerData.map((item, index) => (
               <motion.div
@@ -75,31 +79,24 @@ export default function CareerSection() {
                     >
                       {item.year}
                     </Badge>
-                    {/* パルスアニメーション */}
-                    {index === 0 && (
-                      <div className="absolute -inset-1 bg-primary/20 rounded-full animate-ping"></div>
+                    {/* パルスアニメーション（最新年度） */}
+                    {index === careerData.length - 1 && (
+                      <div className="absolute -inset-1 bg-secondary/20 rounded-full animate-ping"></div>
                     )}
                   </div>
                 </div>
 
                 {/* コンテンツ */}
-                <Card className="flex-1 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-6">
+                <Card className={`flex-1 hover:shadow-lg transition-all duration-300 border-l-4 ${item.accentColor} relative overflow-hidden`}>
+                  {/* カード背景のグラデーション */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none" />
+                  <CardContent className="p-6 relative">
                     <h3 className="text-xl font-semibold mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-muted-foreground">
                       {item.description}
                     </p>
-                    {item.skills && (
-                      <div className="flex flex-wrap gap-2">
-                        {item.skills.map((skill) => (
-                          <Badge key={skill} variant="secondary">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
                   </CardContent>
                 </Card>
               </motion.div>
