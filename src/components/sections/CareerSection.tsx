@@ -17,8 +17,12 @@ const careerData: CareerItem[] = [
     year: "2023",
     title: "Pythonプログラミング学習開始",
     description: "機械学習・Web開発の基礎を習得。個人プロジェクトとしてAIライブストリームシステムを開発。",
+<<<<<<< HEAD
+    skills: ["Python", "Machine Learning", "Web Development"]
+=======
     gradientClass: "from-primary to-cyan-500",
     accentColor: "border-l-primary"
+>>>>>>> aa045a8d678f581f2cf081707e858e1c22152c82
   },
   {
     year: "2024",
@@ -31,8 +35,12 @@ const careerData: CareerItem[] = [
     year: "2025",
     title: "フルスタックエンジニアとして活動",
     description: "AI × Web開発の案件に従事。企業向けのAIチャットボット、RAGシステム、データ分析ダッシュボードなどを開発。",
+<<<<<<< HEAD
+    skills: ["Next.js", "TypeScript", "Python", "FastAPI", "Gemini API"]
+=======
     gradientClass: "from-secondary to-accent",
     accentColor: "border-l-secondary"
+>>>>>>> aa045a8d678f581f2cf081707e858e1c22152c82
   }
 ]
 
@@ -81,7 +89,11 @@ export default function CareerSection() {
                     </Badge>
                     {/* パルスアニメーション（最新年度） */}
                     {index === careerData.length - 1 && (
+<<<<<<< HEAD
+                      <div className="absolute -inset-1 bg-primary/20 rounded-full animate-ping"></div>
+=======
                       <div className="absolute -inset-1 bg-secondary/20 rounded-full animate-ping"></div>
+>>>>>>> aa045a8d678f581f2cf081707e858e1c22152c82
                     )}
                   </div>
                 </div>
