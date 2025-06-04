@@ -43,14 +43,14 @@ export default function Header() {
     <header 
       className={clsx(
         'fixed top-0 w-full z-50 transition-all duration-300',
-        scrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur shadow-sm' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* ロゴ */}
         <Link 
           href="/" 
-          className="font-bold text-xl text-primary-600 dark:text-primary-400"
+          className="font-bold text-xl text-primary-500 dark:text-primary-300"
         >
           Portfolio
         </Link>
@@ -61,7 +61,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="text-sm font-medium hover:text-primary-500 dark:hover:text-primary-300 transition-colors"
             >
               {item.name}
             </Link>
@@ -70,7 +70,7 @@ export default function Header() {
           {/* テーマ切替ボタン */}
           <button 
             onClick={toggleTheme} 
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
             aria-label="テーマ切替"
           >
             {theme === 'dark' ? (
@@ -83,7 +83,7 @@ export default function Header() {
           {/* 言語切替ボタン */}
           <button 
             onClick={toggleLanguage} 
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
             aria-label="言語切替"
           >
             <GlobeIcon className="h-5 w-5" />
@@ -112,7 +112,7 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden absolute top-16 inset-x-0 bg-white dark:bg-gray-900 shadow-lg"
+          className="md:hidden absolute top-16 inset-x-0 bg-white dark:bg-slate-900 shadow-lg"
         >
           <div className="container mx-auto px-4 py-3">
             <nav className="flex flex-col space-y-4">
