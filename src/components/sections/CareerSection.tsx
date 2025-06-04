@@ -13,10 +13,10 @@ interface CareerItem {
 
 const careerData: CareerItem[] = [
   {
-    year: "2025",
-    title: "フルスタックエンジニアとして活動",
-    description: "AI × Web開発の案件に従事。企業向けのAIチャットボット、RAGシステム、データ分析ダッシュボードなどを開発。",
-    skills: ["Next.js", "TypeScript", "Python", "FastAPI", "Gemini API"]
+    year: "2023",
+    title: "Pythonプログラミング学習開始",
+    description: "機械学習・Web開発の基礎を習得。個人プロジェクトとしてAIライブストリームシステムを開発。",
+    skills: ["Python", "Machine Learning", "Web Development"]
   },
   {
     year: "2024",
@@ -25,10 +25,10 @@ const careerData: CareerItem[] = [
     skills: ["LINE Messaging API", "Firebase", "React", "Node.js"]
   },
   {
-    year: "2023",
-    title: "Pythonプログラミング学習開始",
-    description: "機械学習・Web開発の基礎を習得。個人プロジェクトとしてAIライブストリームシステムを開発。",
-    skills: ["Python", "Machine Learning", "Web Development"]
+    year: "2025",
+    title: "フルスタックエンジニアとして活動",
+    description: "AI × Web開発の案件に従事。企業向けのAIチャットボット、RAGシステム、データ分析ダッシュボードなどを開発。",
+    skills: ["Next.js", "TypeScript", "Python", "FastAPI", "Gemini API"]
   }
 ]
 
@@ -75,8 +75,8 @@ export default function CareerSection() {
                     >
                       {item.year}
                     </Badge>
-                    {/* パルスアニメーション */}
-                    {index === 0 && (
+                    {/* パルスアニメーション（最新年度） */}
+                    {index === careerData.length - 1 && (
                       <div className="absolute -inset-1 bg-primary/20 rounded-full animate-ping"></div>
                     )}
                   </div>
