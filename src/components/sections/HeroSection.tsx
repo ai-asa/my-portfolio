@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center pt-16"
+      className="relative min-h-screen flex items-center"
     >
       {/* グラデーション背景 */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -41,24 +41,24 @@ export default function HeroSection() {
         />
       </div>
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-16">
         <motion.div 
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           {/* プロフィールとタイトル */}
-          <div className="flex items-start gap-6 mb-8">
+          <div className="flex items-center gap-8 mb-12">
             {/* アイコン */}
             <motion.div
-              className="relative w-20 h-20 rounded-full overflow-hidden bg-gradient-to-br from-primary to-secondary p-1 flex-shrink-0"
+              className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-gradient-to-br from-primary to-secondary p-1.5 flex-shrink-0"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                <span className="text-2xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+                <span className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
                   KA
                 </span>
               </div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
             {/* 名前と肩書き */}
             <div>
               <motion.h2 
-                className="text-2xl font-bold mb-1"
+                className="text-3xl md:text-4xl font-bold mb-2"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -75,41 +75,51 @@ export default function HeroSection() {
                 浅尾 一樹
               </motion.h2>
               <motion.h1 
-                className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                AI×システム開発の<br className="md:hidden" />
+                AI×システム開発の<br />
                 フルスタックエンジニア
               </motion.h1>
             </div>
           </div>
           
           {/* 詳細説明 */}
-          <motion.p 
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10"
+          <motion.div 
+            className="space-y-4 mb-12 text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            TypeScriptとPythonを駆使し、Next.jsやFastAPIを用いたモダンなWeb開発からAI連携システムまで幅広く対応。
-            ユーザー体験を第一に、技術と創造性を融合させた革新的なソリューションを提供します。
-          </motion.p>
+            <p>
+              TypeScriptとPythonを駆使し、Next.jsやFastAPIを用いた
+              モダンなWeb開発からAI連携システムまで幅広く対応。
+              チャットボット開発、RAG構築、AIエージェント実装など、
+              最先端のAI技術を実用的なソリューションに落とし込みます。
+            </p>
+            <p>
+              ユーザー体験を第一に、技術と創造性を融合させた
+              革新的なソリューションを提供します。
+              副業として1年半の実績を積み重ね、
+              フルスタックエンジニアとして活動中。
+            </p>
+          </motion.div>
           
           {/* CTAボタン */}
           <motion.div 
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button asChild size="lg" className="min-w-[160px]">
+            <Button asChild size="lg" className="text-base px-8 py-6">
               <Link href="#projects">
                 プロジェクトを見る
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="min-w-[140px]">
+            <Button asChild variant="outline" size="lg" className="text-base px-8 py-6">
               <Link href="#contact">
                 お問い合わせ
               </Link>
@@ -117,7 +127,7 @@ export default function HeroSection() {
             <Button 
               variant="secondary" 
               size="lg" 
-              className="min-w-[140px]"
+              className="text-base px-8 py-6"
               onClick={() => {
                 // TODO: チャットボット機能の実装
                 alert('チャットボット機能は現在開発中です')
