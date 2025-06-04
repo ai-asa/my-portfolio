@@ -1,35 +1,36 @@
 # Hero Section 設計仕様
 
 ## 1. 概要
-- 目的: ユーザーに強い第一印象を与え、自己紹介と主要CTA（プロジェクト閲覧／お問い合わせ）へ誘導する
+- 目的: ユーザーに強い第一印象を与え、自己紹介と主要CTA（プロジェクト閲覧／お問い合わせ／AIチャット）へ誘導する
 - 配置場所: ページ最上部 (Above the Fold)
 
 ## 2. コンポーネント構成
 - ファイル: `components/sections/HeroSection.tsx`
 - 種別: React Client Component
 - 内包:
-  - Title（`<h1>`）
-  - Subtitle（`<p>`）
-  - TechTags（アイコンリスト）
-  - CTAButtons（2種類のボタン）
-  - BackgroundAnimation（パーティクル／Canvas）
+  - ProfileIcon（プロフィールアイコン）
+  - Name（名前）
+  - Title（肩書き `<h1>`）
+  - Description（詳細説明 `<p>`）
+  - CTAButtons（3種類のボタン）
+  - BackgroundAnimation（グラデーション／幾何学模様）
 
 ## 3. レイアウト & コンテンツ
 ### 3.1 デスクトップ
-- 2カラムレイアウト
-  - 左カラム (60%幅): テキスト群 + ボタン
-    - `flex flex-col space-y-4`
-  - 右カラム (40%幅): 背景アニメーション
-    - `relative w-full h-full`
-- Title: `text-5xl md:text-6xl font-bold`
-- Subtitle: `text-xl md:text-2xl text-gray-600 dark:text-gray-300`
-- TechTags: `<ul className="flex space-x-3">`アイコン
-- CTAButtons: `<div className="flex space-x-4">`
+- 統合型センターレイアウト（max-width: 800px）
+- プロフィールアイコンと名前を横並び
+  - アイコン: `w-20 h-20 rounded-full`
+  - 名前と肩書き: 縦積み、左揃え
+- Description: 読みやすい行長で4行程度
+- CTAButtons: 左揃え配置
+  - プロジェクトを見る（Primary）
+  - お問い合わせ（Outline）
+  - AIに質問（Secondary with icon）
 
 ### 3.2 モバイル
 - 単一カラム縦積み
-- 順序: Title → Subtitle → TechTags → CTAButtons → Animation
-- フォントサイズ: `text-4xl` → `sm:text-5xl`
+- アイコンサイズ調整: `w-16 h-16`
+- CTAButtons: 2列配置（AIボタンは全幅）
 - パディング: `px-4 py-6`
 
 ## 4. スタイリング & テーマ
