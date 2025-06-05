@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ChevronDown, MessageCircle } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export default function HeroSection() {
   return (
@@ -123,18 +123,6 @@ export default function HeroSection() {
               <Link href="#contact">
                 お問い合わせ
               </Link>
-            </Button>
-            <Button 
-              variant="secondary" 
-              size="lg" 
-              className="text-base px-8 py-6"
-              onClick={() => {
-                // TODO: チャットボット機能の実装
-                alert('チャットボット機能は現在開発中です')
-              }}
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              AIに質問
             </Button>
           </motion.div>
         </motion.div>
